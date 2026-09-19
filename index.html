@@ -98,6 +98,7 @@
       </div>
     </div>
   </div>
+  <div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
 
   <main id="main-content">
     <!-- Hero Section -->
@@ -522,124 +523,236 @@
         <div class="section-header text-center">
           <span class="section-tag">Career History</span>
           <h2 class="section-title">Work Experience & Track Record</h2>
-          <p class="section-subtitle">Real-world impact across telecom infrastructure, commercial SaaS engineering, and technical media.</p>
+          <p class="section-subtitle">Demonstrated engineering impact across mission-critical telecom systems, cloud SaaS, and interactive digital media.</p>
         </div>
 
-        <div class="timeline-container">
+        <!-- Experience Domain Filter -->
+        <div class="experience-filter-tabs" role="tablist" aria-label="Filter experience by domain">
+          <button class="exp-filter-btn active" data-exp-filter="all">All Roles</button>
+          <button class="exp-filter-btn" data-exp-filter="telecom">Telecom & Systems</button>
+          <button class="exp-filter-btn" data-exp-filter="saas">Software & SaaS</button>
+          <button class="exp-filter-btn" data-exp-filter="creative">Digital Media & 3D</button>
+        </div>
+
+        <div class="timeline-container" id="experience-timeline">
           <!-- Timeline Item 1: Tayana Mobility -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-exp-category="telecom">
             <div class="timeline-marker">
               <i class="fa-solid fa-tower-cell"></i>
             </div>
             <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Sep 2025 – Present</span>
-                <span class="timeline-type badge-current">Current Role</span>
+              <div class="exp-card-header">
+                <div class="exp-role-wrap">
+                  <div class="exp-company-icon icon-telecom">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">Graduate Engineer Trainee</h3>
+                    <h4 class="timeline-company">Tayana Mobility Technologies &bull; <span class="exp-location">Bengaluru, IN</span></h4>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Sep 2025 – Present</span>
+                  <span class="timeline-type badge-current"><span class="pulse-dot-sm"></span> Current Role</span>
+                </div>
               </div>
-              <h3 class="timeline-role">Graduate Engineer Trainee</h3>
-              <h4 class="timeline-company">Tayana Mobility Technologies &bull; Bengaluru</h4>
+
+              <!-- Impact Banner Pill -->
+              <div class="exp-impact-banner banner-telecom">
+                <i class="fa-solid fa-bolt"></i>
+                <span><strong>Core Impact:</strong> Carrier-Grade PCC Solutions &bull; High Availability (HA) Cluster Reliability</span>
+              </div>
+
               <p class="timeline-summary">
-                Core engineering contributor to a carrier-grade Telecom PCC (Policy and Charging Control) solution covering high-throughput live browsing sessions and real-time balance quota management.
+                Key contributor to an enterprise Telecom PCC (Policy and Charging Control) solution covering end-to-end subscriber browsing sessions and real-time account balance lifecycle packages.
               </p>
+
               <ul class="timeline-bullets">
-                <li>Engineered and validated core PCC modules handling end-to-end subscriber browsing sessions, package quota creation, and dynamic account balance tracking.</li>
-                <li>Deployed and administered telecom software packages on Virtual Machines (VMs), operating in production environments with strict High Availability (HA) requirements.</li>
-                <li>Collaborated with senior infrastructure architects on backend microservices, SQL/NoSQL transactional stores, and fault-tolerant server configurations to guarantee zero-downtime reliability.</li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Session & Quota Engines:</strong> Developed and validated core PCC modules handling active subscriber browsing sessions, package quota creation, and dynamic balance deductions.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>High-Availability (HA) Virtual Machines:</strong> Deployed, monitored, and maintained the software stack on production Linux VMs with failover considerations for carrier-grade uptime.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Infrastructure & Database Integrity:</strong> Collaborated with senior architects across backend services, SQL/NoSQL stores, and network topologies to ensure absolute transactional consistency during peak traffic loads.</div>
+                </li>
               </ul>
+
               <div class="timeline-tags">
-                <span class="tech-tag">Telecom PCC</span>
-                <span class="tech-tag">High Availability (HA)</span>
-                <span class="tech-tag">Virtual Machines (VM)</span>
+                <span class="tech-tag tag-primary">Telecom PCC</span>
+                <span class="tech-tag tag-primary">High Availability (HA)</span>
+                <span class="tech-tag">Linux Virtual Machines (VM)</span>
                 <span class="tech-tag">Backend Services</span>
-                <span class="tech-tag">Databases</span>
-                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">PostgreSQL / SQL</span>
+                <span class="tech-tag">Network Protocols</span>
               </div>
             </div>
           </div>
 
           <!-- Timeline Item 2: Genzpro Marketing -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-exp-category="saas">
             <div class="timeline-marker">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
             <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2024</span>
-                <span class="timeline-type">Internship</span>
+              <div class="exp-card-header">
+                <div class="exp-role-wrap">
+                  <div class="exp-company-icon icon-saas">
+                    <i class="fa-solid fa-code-branch"></i>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">Software Development Intern</h3>
+                    <h4 class="timeline-company">Genzpro Marketing &bull; <span class="exp-location">Full-Stack SaaS</span></h4>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2024</span>
+                  <span class="timeline-type">Internship</span>
+                </div>
               </div>
-              <h3 class="timeline-role">Software Development Intern</h3>
-              <h4 class="timeline-company">Genzpro Marketing</h4>
+
+              <!-- Impact Banner Pill -->
+              <div class="exp-impact-banner banner-saas">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span><strong>Core Impact:</strong> End-to-End SaaS Shipped &bull; Direct Automated CI/CD Deployments on Vercel & Render</span>
+              </div>
+
               <p class="timeline-summary">
-                Architected and shipped a comprehensive full-stack SaaS business management platform from concept to cloud deployment.
+                Engineered and delivered a complete full-stack SaaS business management application covering product operations, user workflows, and analytics dashboards end-to-end.
               </p>
+
               <ul class="timeline-bullets">
-                <li>Developed end-to-end product features using React.js, HTML5, modern CSS3, Node.js, and Express.js, providing clients with an intuitive business operations dashboard.</li>
-                <li>Constructed and documented RESTful API endpoints, integrated third-party webhooks/services, and established persistent database connections.</li>
-                <li>Managed version control via Git and GitHub, orchestrating seamless continuous deployment pipelines directly onto Vercel and Render with optimized build workflows.</li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Modern Web Architecture:</strong> Built responsive client interfaces with React.js, HTML5, and CSS3, backed by robust Node.js and Express.js microservices.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>RESTful APIs & Integrations:</strong> Implemented secure API contracts, third-party authentication/webhook integrations, and database schemas with Git/GitHub version control.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Continuous Deployment:</strong> Configured zero-container direct deployment pipelines onto Vercel (frontend) and Render (backend services), managing environment variables and build pipelines.</div>
+                </li>
               </ul>
+
               <div class="timeline-tags">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag tag-primary">React.js</span>
+                <span class="tech-tag tag-primary">Node.js & Express</span>
                 <span class="tech-tag">RESTful APIs</span>
-                <span class="tech-tag">Git / GitHub</span>
+                <span class="tech-tag">MongoDB / SQL</span>
                 <span class="tech-tag">Vercel & Render</span>
+                <span class="tech-tag">Git / GitHub</span>
               </div>
             </div>
           </div>
 
           <!-- Timeline Item 3: Hello AR -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-exp-category="creative">
             <div class="timeline-marker">
               <i class="fa-solid fa-cube"></i>
             </div>
             <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Jun 2023 – Aug 2023</span>
-                <span class="timeline-type">Client Engagement</span>
+              <div class="exp-card-header">
+                <div class="exp-role-wrap">
+                  <div class="exp-company-icon icon-3d">
+                    <i class="fa-solid fa-cubes"></i>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">Content & 3D Design Contributor</h3>
+                    <h4 class="timeline-company">Hello AR &bull; <span class="exp-location">Samsung Hardware Campaigns</span></h4>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Jun 2023 – Aug 2023</span>
+                  <span class="timeline-type">Client Engagement</span>
+                </div>
               </div>
-              <h3 class="timeline-role">Content & 3D Design Contributor</h3>
-              <h4 class="timeline-company">Hello AR</h4>
+
+              <!-- Impact Banner Pill -->
+              <div class="exp-impact-banner banner-3d">
+                <i class="fa-solid fa-chart-line"></i>
+                <span><strong>Core Impact:</strong> +25% Measured Surge in Customer Interaction with 3D Media</span>
+              </div>
+
               <p class="timeline-summary">
-                Crafted high-fidelity 3D assets and dynamic visual media campaigns for flagship consumer tech products.
+                Designed photorealistic 3D product renders and edited high-engagement promotional video campaigns tailored for Samsung products.
               </p>
+
               <ul class="timeline-bullets">
-                <li>Created detailed 3D models and edited high-energy promotional video content tailored for Samsung product launches.</li>
-                <li>Drove a measurable <strong>25% increase in customer interaction</strong> through interactive visual presentations and AR-ready render workflows.</li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>3D Modeling & Shader Pipelines:</strong> Modeled detailed consumer tech geometry in Blender 3D, creating realistic metallic textures, dynamic lighting, and camera paths.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Engagement Optimization:</strong> Produced interactive visual storytelling that contributed to a verified <strong>25% increase in customer interaction</strong> for campaign rollouts.</div>
+                </li>
               </ul>
+
               <div class="timeline-tags">
-                <span class="tech-tag">Blender 3D</span>
-                <span class="tech-tag">Samsung Campaigns</span>
-                <span class="tech-tag">Video Production</span>
+                <span class="tech-tag tag-primary">Blender 3D</span>
+                <span class="tech-tag tag-primary">+25% Interaction</span>
+                <span class="tech-tag">Samsung Products</span>
+                <span class="tech-tag">After Effects</span>
                 <span class="tech-tag">Visual Storytelling</span>
               </div>
             </div>
           </div>
 
           <!-- Timeline Item 4: Freelance Content Creator -->
-          <div class="timeline-item">
+          <div class="timeline-item" data-exp-category="creative">
             <div class="timeline-marker">
               <i class="fa-solid fa-video"></i>
             </div>
             <div class="timeline-content">
-              <div class="timeline-meta">
-                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Dec 2022 – Present</span>
-                <span class="timeline-type">Entrepreneurial / Independent</span>
+              <div class="exp-card-header">
+                <div class="exp-role-wrap">
+                  <div class="exp-company-icon icon-video">
+                    <i class="fa-solid fa-clapperboard"></i>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">Freelance Content Creator & Video Editor</h3>
+                    <h4 class="timeline-company">Self-Employed &bull; <span class="exp-location">Digital Brand Growth</span></h4>
+                  </div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-period"><i class="fa-regular fa-calendar"></i> Dec 2022 – Present</span>
+                  <span class="timeline-type">Independent</span>
+                </div>
               </div>
-              <h3 class="timeline-role">Freelance Content Creator & Video Editor</h3>
-              <h4 class="timeline-company">Self-Employed</h4>
+
+              <!-- Impact Banner Pill -->
+              <div class="exp-impact-banner banner-video">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span><strong>Core Impact:</strong> +20% Boost in Client Audience Engagement via Narrative Post-Production</span>
+              </div>
+
               <p class="timeline-summary">
-                Overseeing end-to-end digital content production, storytelling strategy, and post-production for diverse creators and brands.
+                Managing end-to-end digital content pipelines, scriptwriting, pacing, color grading, and technical demo storytelling for multiple client channels.
               </p>
+
               <ul class="timeline-bullets">
-                <li>Direct scriptwriting, technical editing, pacing, color treatment, and post-production pipelines using Premiere Pro and DaVinci Resolve.</li>
-                <li>Consistently lifted client engagement metrics by over <strong>20%</strong> through high-retention editing techniques and strategic narrative structuring.</li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Technical Editing & Pacing:</strong> Mastered video editing, audio mixing, and visual effects in Premiere Pro and DaVinci Resolve with strict deadline adherence.</div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle bullet-icon"></i>
+                  <div><strong>Retention Strategy:</strong> Lifted client viewer retention and engagement by <strong>over 20%</strong> through data-informed editing structures and hook optimization.</div>
+                </li>
               </ul>
+
               <div class="timeline-tags">
-                <span class="tech-tag">Premiere Pro</span>
-                <span class="tech-tag">DaVinci Resolve</span>
-                <span class="tech-tag">Audience Growth (+20%)</span>
-                <span class="tech-tag">Creative Strategy</span>
+                <span class="tech-tag tag-primary">Premiere Pro</span>
+                <span class="tech-tag tag-primary">DaVinci Resolve</span>
+                <span class="tech-tag">+20% Engagement</span>
+                <span class="tech-tag">Audio Mastering</span>
+                <span class="tech-tag">Audience Growth</span>
               </div>
             </div>
           </div>

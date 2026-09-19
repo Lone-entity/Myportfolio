@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Header Scroll Effects & Active Navigation Spy
   initHeaderAndNavSpy();
 
-  // 3. Mobile Drawer Menu Toggle
+  // 3. Mobile Drawer Menu Toggle & Backdrop
   initMobileDrawer();
 
   // 4. Skills Category Filter
   initSkillsFilter();
+
+  // 4b. Experience Domain Filter
+  initExperienceFilter();
 
   // 5. One-Click Copy-to-Clipboard with Toast Feedback
   initCopyToClipboard();
@@ -123,11 +126,12 @@ function initHeaderAndNavSpy() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Mobile Drawer Navigation
+   3. Mobile Drawer Navigation & Backdrop
    -------------------------------------------------------------------------- */
 function initMobileDrawer() {
   const toggleBtn = document.getElementById('mobile-toggle');
   const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('drawer-backdrop');
   const closeBtn = document.getElementById('drawer-close');
   const drawerLinks = document.querySelectorAll('.drawer-link');
 
@@ -135,18 +139,21 @@ function initMobileDrawer() {
 
   function openDrawer() {
     drawer.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
     toggleBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     drawer.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
     toggleBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
   toggleBtn.addEventListener('click', openDrawer);
   closeBtn.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
 
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeDrawer);
@@ -156,6 +163,34 @@ function initMobileDrawer() {
     if (e.key === 'Escape' && drawer.classList.contains('open')) {
       closeDrawer();
     }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   3b. Experience Domain Filter
+   -------------------------------------------------------------------------- */
+function initExperienceFilter() {
+  const expTabs = document.querySelectorAll('.exp-filter-btn');
+  const expItems = document.querySelectorAll('.timeline-item');
+
+  if (!expTabs.length || !expItems.length) return;
+
+  expTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      expTabs.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-exp-filter');
+
+      expItems.forEach(item => {
+        const category = item.getAttribute('data-exp-category');
+        if (filter === 'all' || category === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
   });
 }
 
