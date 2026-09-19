@@ -80,16 +80,37 @@
       </button>
     </div>
     <nav class="drawer-nav">
-      <a href="#about" class="drawer-link">About Me</a>
-      <a href="#skills" class="drawer-link">Skills & Stack</a>
-      <a href="#experience" class="drawer-link">Work Experience</a>
-      <a href="#projects" class="drawer-link">Featured Projects</a>
-      <a href="#education" class="drawer-link">Education & Awards</a>
-      <a href="#contact" class="drawer-link">Get in Touch</a>
+      <a href="#about" class="drawer-link">
+        <span><i class="fa-solid fa-user-tie drawer-icon"></i> About Me</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
+      <a href="#skills" class="drawer-link">
+        <span><i class="fa-solid fa-microchip drawer-icon"></i> Skills & Stack</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
+      <a href="#experience" class="drawer-link">
+        <span><i class="fa-solid fa-briefcase drawer-icon"></i> Work Experience</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
+      <a href="#projects" class="drawer-link">
+        <span><i class="fa-solid fa-code-fork drawer-icon"></i> Featured Projects</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
+      <a href="#education" class="drawer-link">
+        <span><i class="fa-solid fa-graduation-cap drawer-icon"></i> Education & Awards</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
+      <a href="#contact" class="drawer-link">
+        <span><i class="fa-regular fa-paper-plane drawer-icon"></i> Get in Touch</span>
+        <i class="fa-solid fa-chevron-right drawer-chevron"></i>
+      </a>
     </nav>
     <div class="drawer-footer">
+      <a href="tel:+918147835117" class="btn btn-primary btn-full mb-2">
+        <i class="fa-solid fa-phone"></i> Call Suresh Directly
+      </a>
       <button id="mobile-print-resume" class="btn btn-outline btn-full mb-3">
-        <i class="fa-solid fa-print"></i> Print / Save ATS Resume
+        <i class="fa-solid fa-file-pdf"></i> Save ATS Resume
       </button>
       <div class="drawer-socials">
         <a href="https://github.com/Lone-entity" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -104,8 +125,21 @@
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
-        <!-- Hero Text -->
+        <!-- Hero Text & Mobile Executive Intro -->
         <div class="hero-content">
+          <!-- Mobile Executive Avatar & Badges (Prominently displayed on <=991px, hidden on desktop) -->
+          <div class="hero-mobile-avatar-wrap">
+            <div class="mobile-avatar-ring">
+              <img src="assets/profile.jpg" alt="Sureshkumar Choudhary" class="mobile-avatar-img" width="116" height="116" loading="eager" fetchpriority="high">
+              <span class="avatar-radar-dot" title="Available for Roles"></span>
+            </div>
+            <div class="mobile-avatar-chips">
+              <span class="hero-chip chip-telecom"><i class="fa-solid fa-tower-broadcast"></i> Telecom PCC &amp; HA</span>
+              <span class="hero-chip chip-degree"><i class="fa-solid fa-graduation-cap"></i> DSCE EEE (8.53)</span>
+            </div>
+          </div>
+
+          <!-- Availability Status Badge -->
           <div class="status-badge">
             <span class="pulse-dot"></span>
             <span>Available for Full-Time Roles &bull; Bengaluru / Relocation</span>
@@ -123,38 +157,44 @@
           </div>
 
           <p class="hero-description">
-            B.E. in Electrical & Electronics Engineering with hands-on expertise building production-ready 
-            <strong>Full-Stack Web Applications</strong>, <strong>Carrier-Grade Telecom PCC Solutions</strong>, and 
-            <strong>Cloud CI/CD Deployments</strong>. Proven experience delivering high-availability software architectures 
-            and scalable RESTful ecosystems.
+            B.E. in Electrical &amp; Electronics Engineering (8.53 CGPA) @ DSCE. Building carrier-grade 
+            <strong>Telecom PCC Solutions &amp; High Availability (HA)</strong> architectures at Tayana Mobility, 
+            production <strong>Full-Stack Web Applications (React, Node.js)</strong>, and automated <strong>Cloud CI/CD Deployments</strong>.
           </p>
 
-          <!-- Hero CTAs -->
+          <!-- Key Quick Achievement Highlights Strip (High Impact for Recruiter Scans) -->
+          <div class="hero-highlights-strip">
+            <div class="hh-item"><i class="fa-solid fa-bolt highlight-icon-cyan"></i> <span>Live Carrier PCC Quota Engines &amp; Balance Logic</span></div>
+            <div class="hh-item"><i class="fa-solid fa-server highlight-icon-indigo"></i> <span>High Availability (HA) Linux Virtual Machine Clusters</span></div>
+            <div class="hh-item"><i class="fa-solid fa-cloud-arrow-up highlight-icon-emerald"></i> <span>React.js &amp; Node.js Full-Stack SaaS Shipped</span></div>
+          </div>
+
+          <!-- Hero CTAs (Optimized for Desktop & Touch Devices) -->
           <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary btn-lg">
+            <a href="#projects" class="btn btn-primary btn-lg cta-primary">
               <i class="fa-solid fa-code"></i>
               <span>Explore Projects</span>
             </a>
-            <a href="#contact" class="btn btn-glass btn-lg">
+            <a href="#contact" class="btn btn-glass btn-lg cta-secondary">
               <i class="fa-regular fa-paper-plane"></i>
               <span>Contact Me</span>
             </a>
-            <button id="hero-quick-resume" class="btn btn-outline btn-lg" title="Quick view or print resume">
-              <i class="fa-solid fa-arrow-down-to-bracket"></i>
-              <span>Download CV</span>
+            <button id="hero-quick-resume" class="btn btn-outline btn-lg cta-resume" title="Quick view or print ATS resume">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span>Save ATS Resume</span>
             </button>
           </div>
 
           <!-- Quick Copy Contact Badges (High Recruiter UX) -->
           <div class="quick-contact-pills">
-            <button class="copy-pill" data-copy="sureshkc597@gmail.com" title="Click to copy email">
+            <button class="copy-pill pill-email" data-copy="sureshkc597@gmail.com" title="Click to copy email">
               <i class="fa-regular fa-envelope"></i>
-              <span>sureshkc597@gmail.com</span>
+              <span class="pill-text">sureshkc597@gmail.com</span>
               <i class="fa-regular fa-copy copy-icon"></i>
             </button>
-            <button class="copy-pill" data-copy="+918147835117" title="Click to copy phone number">
+            <button class="copy-pill pill-phone" data-copy="+918147835117" title="Click to copy phone number">
               <i class="fa-solid fa-phone"></i>
-              <span>+91 8147835117</span>
+              <span class="pill-text">+91 8147835117</span>
               <i class="fa-regular fa-copy copy-icon"></i>
             </button>
             <div class="social-links-pill">
@@ -168,8 +208,8 @@
           </div>
         </div>
 
-        <!-- Hero Visual Profile Card -->
-        <div class="hero-visual">
+        <!-- Hero Visual Profile Card (Desktop Focus) -->
+        <div class="hero-visual desktop-only">
           <div class="profile-card-container">
             <div class="profile-card-glow"></div>
             <div class="profile-card">
@@ -181,7 +221,7 @@
                 <div class="floating-badge badge-top-right">
                   <div class="badge-icon-wrap"><i class="fa-solid fa-tower-broadcast"></i></div>
                   <div>
-                    <span class="badge-label">Telecom PCC & HA</span>
+                    <span class="badge-label">Telecom PCC &amp; HA</span>
                     <span class="badge-sub">Tayana Mobility</span>
                   </div>
                 </div>
@@ -199,7 +239,7 @@
               <div class="profile-card-footer">
                 <div class="profile-mini-stat">
                   <span class="stat-num">Full-Stack</span>
-                  <span class="stat-name">React & Node.js</span>
+                  <span class="stat-name">React &amp; Node.js</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="profile-mini-stat">
@@ -1151,6 +1191,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Sticky Bottom Quick-Action Bar (High Recruiter Conversion) -->
+  <aside class="mobile-sticky-action-bar" id="mobile-sticky-bar" aria-label="Quick contact bar">
+    <a href="tel:+918147835117" class="sticky-action-item sticky-call" title="Call Suresh Directly">
+      <div class="sticky-icon-circle"><i class="fa-solid fa-phone"></i></div>
+      <span>Call</span>
+    </a>
+    <a href="mailto:sureshkc597@gmail.com" class="sticky-action-item sticky-email" title="Email Suresh">
+      <div class="sticky-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+      <span>Email</span>
+    </a>
+    <button id="sticky-resume-btn" class="sticky-action-item sticky-resume" title="Save ATS Resume">
+      <div class="sticky-icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+      <span>ATS CV</span>
+    </button>
+    <a href="#contact" class="sticky-action-item sticky-message" title="Send Direct Message">
+      <div class="sticky-icon-circle"><i class="fa-solid fa-paper-plane"></i></div>
+      <span>Message</span>
+    </a>
+  </aside>
 
   <!-- Toast Notification element -->
   <div class="toast" id="toast" role="status" aria-live="polite">

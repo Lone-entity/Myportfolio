@@ -185,7 +185,7 @@ function initExperienceFilter() {
       expItems.forEach(item => {
         const category = item.getAttribute('data-exp-category');
         if (filter === 'all' || category === filter) {
-          item.style.display = 'block';
+          item.style.display = '';
         } else {
           item.style.display = 'none';
         }
@@ -214,8 +214,8 @@ function initSkillsFilter() {
       cards.forEach(card => {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
-          card.style.display = 'block';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
+          card.style.display = '';
+          card.style.animation = 'fadeIn 0.35s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -519,7 +519,8 @@ function initResumePrint() {
   const printBtns = [
     document.getElementById('print-resume-btn'),
     document.getElementById('hero-quick-resume'),
-    document.getElementById('mobile-print-resume')
+    document.getElementById('mobile-print-resume'),
+    document.getElementById('sticky-resume-btn')
   ];
 
   printBtns.forEach(btn => {
